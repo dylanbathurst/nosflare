@@ -1,4 +1,3 @@
-# Change name if you feel like it
 name = 'puresignal-relay'
 compatibility_date = "2025-01-04"
 main = "worker.js"
@@ -9,7 +8,6 @@ name = "RELAY_WEBSOCKET"
 class_name = "RelayWebSocket"
 
 # D1 Database binding
-# Important! Change name and id settings to your own
 [[d1_databases]]
 binding = "RELAY_DATABASE"
 database_name = "puresignal-relay-db"

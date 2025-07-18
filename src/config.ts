@@ -1,4 +1,4 @@
-import { RelayInfo } from './types';
+import { RelayInfo } from "./types";
 
 // ***************************** //
 // ** BEGIN EDITABLE SETTINGS ** //
@@ -7,18 +7,19 @@ import { RelayInfo } from './types';
 // Settings below can be configured to your preferences
 
 // Pay to relay
-export const relayNpub = "npub16jdfqgazrkapk0yrqm9rdxlnys7ck39c7zmdzxtxqlmmpxg04r0sd733sv"; // Use your own npub
-export const PAY_TO_RELAY_ENABLED = true; // Set to false to disable pay to relay
+export const relayNpub =
+  "npub1lu4ha0gdfvg79h2h0qukzkrmn0awkpu4wv4ln632xgghhyt5ykcqppy85p"; // Use your own npub
+export const PAY_TO_RELAY_ENABLED = false; // Set to false to disable pay to relay
 export const RELAY_ACCESS_PRICE_SATS = 2121; // Price in SATS for relay access
 
 // Relay info
 export const relayInfo: RelayInfo = {
-  name: "Nosflare",
-  description: "A serverless Nostr relay through Cloudflare Worker and D1 database",
-  pubkey: "d49a9023a21dba1b3c8306ca369bf3243d8b44b8f0b6d1196607f7b0990fa8df",
-  contact: "lux@fed.wtf",
+  name: "PureSignal",
+  description: "A relay for puresignal.news, bitcoin-only news.",
+  pubkey: "ff2b7ebd0d4b11e2dd57783961587b9bfaeb0795732bf9ea2a32117b917425b0",
+  contact: "puresignalnews@gmail.com",
   supported_nips: [1, 2, 4, 5, 9, 11, 12, 15, 16, 17, 20, 22, 33, 40],
-  software: "https://github.com/Spl0itable/nosflare",
+  software: "https://github.com/dylanbathurst/nosflare",
   version: "7.2.7",
   icon: "https://raw.githubusercontent.com/Spl0itable/nosflare/main/images/flare.png",
 
@@ -71,7 +72,7 @@ export const relayInfo: RelayInfo = {
 
 // Nostr address NIP-05 verified users (for verified checkmark like username@your-relay.com)
 export const nip05Users: Record<string, string> = {
-  "Luxas": "d49a9023a21dba1b3c8306ca369bf3243d8b44b8f0b6d1196607f7b0990fa8df",
+  Luxas: "d49a9023a21dba1b3c8306ca369bf3243d8b44b8f0b6d1196607f7b0990fa8df",
   // ... more NIP-05 verified users
 };
 
@@ -81,7 +82,17 @@ export const enableGlobalDuplicateCheck = false; // When anti-spam is enabled, s
 
 // Kinds subjected to duplicate checks (only when anti-spam is enabled)
 export const antiSpamKinds = new Set([
-  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 40, 41, 42, 43, 44, 64, 818, 1021, 1022, 1040, 1059, 1063, 1311, 1617, 1621, 1622, 1630, 1633, 1971, 1984, 1985, 1986, 1987, 2003, 2004, 2022, 4550, 5000, 5999, 6000, 6999, 7000, 9000, 9030, 9041, 9467, 9734, 9735, 9802, 10000, 10001, 10002, 10003, 10004, 10005, 10006, 10007, 10009, 10015, 10030, 10050, 10063, 10096, 13194, 21000, 22242, 23194, 23195, 24133, 24242, 27235, 30000, 30001, 30002, 30003, 30004, 30005, 30007, 30008, 30009, 30015, 30017, 30018, 30019, 30020, 30023, 30024, 30030, 30040, 30041, 30063, 30078, 30311, 30315, 30402, 30403, 30617, 30618, 30818, 30819, 31890, 31922, 31923, 31924, 31925, 31989, 31990, 34235, 34236, 34237, 34550, 39000, 39001, 39002, 39003, 39004, 39005, 39006, 39007, 39008, 39009
+  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 40, 41, 42, 43, 44,
+  64, 818, 1021, 1022, 1040, 1059, 1063, 1311, 1617, 1621, 1622, 1630, 1633,
+  1971, 1984, 1985, 1986, 1987, 2003, 2004, 2022, 4550, 5000, 5999, 6000, 6999,
+  7000, 9000, 9030, 9041, 9467, 9734, 9735, 9802, 10000, 10001, 10002, 10003,
+  10004, 10005, 10006, 10007, 10009, 10015, 10030, 10050, 10063, 10096, 13194,
+  21000, 22242, 23194, 23195, 24133, 24242, 27235, 30000, 30001, 30002, 30003,
+  30004, 30005, 30007, 30008, 30009, 30015, 30017, 30018, 30019, 30020, 30023,
+  30024, 30030, 30040, 30041, 30063, 30078, 30311, 30315, 30402, 30403, 30617,
+  30618, 30818, 30819, 31890, 31922, 31923, 31924, 31925, 31989, 31990, 34235,
+  34236, 34237, 34550, 39000, 39001, 39002, 39003, 39004, 39005, 39006, 39007,
+  39008, 39009,
   // Add other kinds you want to check for duplicates
 ]);
 
@@ -92,7 +103,7 @@ export const blockedPubkeys = new Set([
   "fed5c0c3c8fe8f51629a0b39951acdf040fd40f53a327ae79ee69991176ba058",
   "e810fafa1e89cdf80cced8e013938e87e21b699b24c8570537be92aec4b12c18",
   "05aee96dd41429a3ae97a9dac4dfc6867fdfacebca3f3bdc051e5004b0751f01",
-  "53a756bb596055219d93e888f71d936ec6c47d960320476c955efd8941af4362"
+  "53a756bb596055219d93e888f71d936ec6c47d960320476c955efd8941af4362",
 ]);
 
 // Allowed pubkeys
@@ -103,9 +114,7 @@ export const allowedPubkeys = new Set<string>([
 
 // Blocked event kinds
 // Add comma-separated kinds Ex: 1064, 4, 22242
-export const blockedEventKinds = new Set([
-  1064
-]);
+export const blockedEventKinds = new Set([1064]);
 
 // Allowed event kinds
 // Add comma-separated kinds Ex: 1, 2, 3
@@ -115,7 +124,7 @@ export const allowedEventKinds = new Set<number>([
 
 // Blocked words or phrases (case-insensitive)
 export const blockedContent = new Set([
-  "~~ hello world! ~~"
+  "~~ hello world! ~~",
   // ... more blocked content
 ]);
 
@@ -152,7 +161,7 @@ export const allowedTags = new Set<string>([
 export const PUBKEY_RATE_LIMIT = { rate: 50 / 60000, capacity: 50 }; // 50 EVENT messages per min
 export const REQ_RATE_LIMIT = { rate: 5000 / 60000, capacity: 5000 }; // 5,000 REQ messages per min
 export const excludedRateLimitKinds = new Set<number>([
-  1059
+  1059, 30023,
   // ... kinds to exclude from EVENT rate limiting Ex: 1, 2, 3
 ]);
 
@@ -161,7 +170,7 @@ export const excludedRateLimitKinds = new Set<number>([
 // *************************** //
 
 // Helper validation functions
-import { NostrEvent } from './types';
+import { NostrEvent } from "./types";
 
 export function isPubkeyAllowed(pubkey: string): boolean {
   if (allowedPubkeys.size > 0 && !allowedPubkeys.has(pubkey)) {
@@ -179,13 +188,13 @@ export function isEventKindAllowed(kind: number): boolean {
 
 export function containsBlockedContent(event: NostrEvent): boolean {
   const lowercaseContent = (event.content || "").toLowerCase();
-  const lowercaseTags = event.tags.map(tag => tag.join("").toLowerCase());
+  const lowercaseTags = event.tags.map((tag) => tag.join("").toLowerCase());
 
   for (const blocked of blockedContent) {
     const blockedLower = blocked.toLowerCase(); // Checks case-insensitively
     if (
       lowercaseContent.includes(blockedLower) ||
-      lowercaseTags.some(tag => tag.includes(blockedLower))
+      lowercaseTags.some((tag) => tag.includes(blockedLower))
     ) {
       return true;
     }
