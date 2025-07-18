@@ -12,13 +12,13 @@ class_name = "RelayWebSocket"
 # Important! Change name and id settings to your own
 [[d1_databases]]
 binding = "RELAY_DATABASE"
-database_name = "nostr-relay"
-database_id = "ba4f97db-cc23-4ea0-b7da-cf8ddc3d84ef"
+database_name = "puresignal-relay-db"
+database_id = "0859bdfb-644a-4eec-a013-aeab9cefc793"
 
 # R2 bucket binding for event archive
 [[r2_buckets]]
 binding = "EVENT_ARCHIVE"
-bucket_name = "nostr-event-archive"
+bucket_name = "puresignal-relay-storage"
 
 # CPU limits (lower to 10 if not on paid Workers plan)
 [limits]
