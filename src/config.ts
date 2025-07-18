@@ -9,7 +9,7 @@ import { RelayInfo } from "./types";
 // Pay to relay
 export const relayNpub =
   "npub1lu4ha0gdfvg79h2h0qukzkrmn0awkpu4wv4ln632xgghhyt5ykcqppy85p"; // Use your own npub
-export const PAY_TO_RELAY_ENABLED = false; // Set to false to disable pay to relay
+export const PAY_TO_RELAY_ENABLED = true; // Set to false to disable pay to relay
 export const RELAY_ACCESS_PRICE_SATS = 2121; // Price in SATS for relay access
 
 // Relay info
