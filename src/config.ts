@@ -72,7 +72,8 @@ export const relayInfo: RelayInfo = {
 
 // Nostr address NIP-05 verified users (for verified checkmark like username@your-relay.com)
 export const nip05Users: Record<string, string> = {
-  Luxas: "d49a9023a21dba1b3c8306ca369bf3243d8b44b8f0b6d1196607f7b0990fa8df",
+  PureSignal:
+    "ff2b7ebd0d4b11e2dd57783961587b9bfaeb0795732bf9ea2a32117b917425b0",
   // ... more NIP-05 verified users
 };
 
