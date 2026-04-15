@@ -110,7 +110,7 @@ export const blockedPubkeys = new Set([
 // Allowed pubkeys
 // Add pubkeys in hex format to allow write access
 export const allowedPubkeys = new Set<string>([
-  // ... pubkeys that are explicitly allowed
+  '1f5787cd6d39c10a4658cf1f2d5b2ea6e1e1d9e60a94b9fda233a775c829890b', 'af68206fbc4d3f7db3b354def1e4e5068f8e07409b67fa708b941a400edb4dff', '8f19371419b82cd868ed87b58acd389c4852e143f944758de18d59e9ac50dec5', 'b1ddb4d750bd1b9682a14da911579f9b2a6a67de4d56a46cc1ab768f471244e7', '9ca447d2b3ff56a0cb987d5eed091919b30c2607aa71bb4b057cc141fbf5a36d', 'eb0157aff3900316e4ae71ca958125756af9f13b3af05fd7dc130f1377ab6c55', '8bad92c35390f7c40828d6c0b6114da95156e9712be68f69b7319102ca714aa5', 'dfa027078d8caeab4700cfa2c7a5bed178284b4316dadbd5aed7885541ca50e3', '7f6db517320b670a2b1d79d50b6f11b8fd476d91ec99529fd82fd041a4931eda', 'cae03c484aaa419722a2dc859f2e803e343c39b9a09ab6aeac8ae2d12a7d6671'
 ]);
 
 // Blocked event kinds
@@ -120,7 +120,7 @@ export const blockedEventKinds = new Set([1064]);
 // Allowed event kinds
 // Add comma-separated kinds Ex: 1, 2, 3
 export const allowedEventKinds = new Set<number>([
-  // ... kinds that are explicitly allowed
+  0, 30023, 30024
 ]);
 
 // Blocked words or phrases (case-insensitive)
