@@ -1,4 +1,6 @@
-name = 'puresignal-relay'
+# Change name if you feel like it
+name = "puresignal-relay"
+
 compatibility_date = "2025-01-04"
 main = "worker.js"
 
